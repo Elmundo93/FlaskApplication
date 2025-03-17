@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<body>
+  <h1>Create Post</h1>
+  <form method="post">
+    Author:<br><input name="author"><br>
+    Title:<br><input name="title"><br>
+    Content:<br><textarea name="content"></textarea><br>
+    <button type="submit">Save</button>
+  </form>
+  <a href="{{ url_for('index')}}">Back</a>
+</body>
+</html>

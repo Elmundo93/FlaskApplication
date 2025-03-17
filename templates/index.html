@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><title>Flask Blog</title></head>
+<body>
+  <h1>All Posts</h1>
+  <a href="{{ url_for('create') }}">New Post</a>
+  {% for p in posts %}
+    <div class="post">
+      <h2>{{ p.title }}</h2>
+      <p><em>By {{ p.author }}</em></p>
+      <p>{{ p.content }}</p>
+      <a href="{{ url_for('edit', id=p.id) }}">Edit</a>
+      <form action="{{ url_for('delete', id=p.id) }}" method="post" style="display:inline;">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  {% endfor %}
+</body>
+</html>
