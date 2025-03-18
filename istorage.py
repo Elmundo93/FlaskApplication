@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class IStorage(ABC):
     @abstractmethod
-    def list_movies(self):
+    def list_data(self):
         """
         Returns a dictionary of movies.
         Example:
@@ -15,21 +15,21 @@ class IStorage(ABC):
         pass
 
     @abstractmethod
-    def add_movie(self, title, year, rating, poster):
+    def add_data(self, author, title, content ):
         """
         Adds a movie with the given parameters.
         """
         pass
 
     @abstractmethod
-    def delete_movie(self, title):
+    def delete_data(self, id, author, title):
         """
         Deletes the movie with the given title.
         """
         pass
 
     @abstractmethod
-    def update_movie(self, title, rating):
+    def update_data(self, id, author, title, content):
         """
         Updates the movie’s rating.
         """
